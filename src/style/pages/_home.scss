@@ -1,0 +1,115 @@
+.home-container{
+    padding: 45px 1vw;
+    background-color: #d1cfcf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .home{
+        width: 97vw;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+    }
+}
+@media (max-width:1600px) {
+    .louction{
+        h1{
+            font-size: 36px ;
+        }
+    }
+}
+@media (max-width:1440px) {
+
+    .time_zone{
+        label{
+            font-size: 16px ;
+        }
+    }
+    .louction{
+        h1{
+            font-size: 30px ;
+        }
+    }
+}
+@media (max-width:1280px) {
+    .temp-and-search-container{
+        padding: 20px 10px;
+    }
+    .temp-container{
+        .Show{
+            h3{
+                font-size: 16px;
+            }
+            h2{
+                font-size: 16px;
+            }
+        }
+    }
+}
+@media (max-width:1024px) {
+    .home{
+        flex-direction: column;
+        align-items: center;
+    }
+    .temp-and-search-container{
+        width: 100%;
+        height: 100vh;
+        gap: 50px;
+    }
+    .temp-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .nav-bar{
+            align-self: center;
+        }
+        border-radius: 0px 0px 20px 20px;
+        .Show{
+            height: 20%;
+        }
+    }
+}
+@media (max-width:800px) {
+    .notifi_container{
+        width: 550px;
+    }
+    .all-data-show-container{
+        gap: 30px 10px;
+    }
+    .Show{
+        width: 45% !important;
+    }
+}
+@media (max-width:600px) {
+    .notifi_container{
+        width: 400px;
+        .x{
+            width: 7%;
+        }
+        .notifi_para{
+            width: 97%;
+            font-size: 14px;
+        }
+    }
+    .Show{
+        width: 65% !important;
+    }
+}
+@media (max-width:480px) {
+    .nav-bar{
+        flex-wrap: wrap;
+        justify-content: center;
+        >div{
+            width: 40%;
+        }
+    }
+    .notifi_container{
+        width: 320px;
+    }
+}
+@media (max-width:320px) {
+    .time_zone{
+        flex-direction: column;
+    }
+}

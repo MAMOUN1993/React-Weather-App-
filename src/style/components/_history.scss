@@ -1,0 +1,29 @@
+.hostory-container{
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    background-color: #efefef;
+    max-height: 130px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 0px 20px 20px;
+    position: absolute;
+    >div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        height: 40px;
+        color: #748cf1;
+        h2{
+            font-size: 18px;
+            text-align: start;
+            text-overflow: clip;
+            font-weight: 400;
+            cursor: pointer;
+            text-wrap: nowrap;
+        }
+    }
+}

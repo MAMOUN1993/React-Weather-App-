@@ -1,0 +1,450 @@
+.loading-container {
+  width: 100%;
+  height: 100%;
+  z-index: 5000;
+  background-color: rgb(20, 20, 20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  gap: 20px;
+}
+.loading-container h3 {
+  color: white;
+}
+
+.circle-container {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.loading-container .white-circle,
+.black-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.white-circle {
+  background-color: white;
+}
+
+.black-circle {
+  background-color: rgb(20, 20, 20);
+  position: absolute;
+  animation-name: blk;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  top: 0%;
+  left: -100%;
+}
+
+@keyframes blk {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.temp-container {
+  border-radius: 0px 10px 10px 0px;
+  width: 70%;
+  background-color: #efefef;
+}
+.temp-container .nav-bar {
+  display: flex;
+  padding: 20px;
+  gap: 10px;
+}
+.temp-container .nav-bar > div {
+  cursor: pointer;
+  color: #8c8c8c;
+}
+.temp-container .nav-bar > div h2 {
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 26px;
+  transition-duration: 200ms;
+}
+.temp-container .nav-bar > div h2[attr=true] {
+  color: #748cf1;
+  font-weight: 600;
+}
+
+.temp-and-search-container {
+  height: 90vh;
+  width: 35%;
+  background-color: white;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  text-align: center;
+  color: #686763;
+  border-radius: 10px;
+}
+.temp-and-search-container .search-container[attr=true] {
+  border-radius: 20px 20px 0px 0px;
+}
+.temp-and-search-container .search-container[secattr=true] {
+  border-radius: 20px 20px 0px 0px;
+}
+.temp-and-search-container .search-container {
+  width: 100%;
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 20px;
+}
+.temp-and-search-container .search-container > div:first-of-type {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.temp-and-search-container .search-container input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  height: 44px;
+  color: #748cf1;
+  font-size: 18px;
+  padding: 0px 15px;
+  transition-duration: 400ms;
+  outline: 2px solid transparent;
+}
+.temp-and-search-container .search-container i {
+  font-size: 20px;
+  color: #748cf1;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+}
+.temp-and-search-container .search-container .Search-compont {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #efefef;
+  color: #748cf1;
+  max-height: 130px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 0px 0px 20px 20px;
+}
+.temp-and-search-container .search-container .Search-compont > div {
+  cursor: pointer;
+}
+.temp-and-search-container .search-container .Search-compont > div h2 {
+  font-weight: 400;
+  font-size: 20px;
+  text-wrap: nowrap;
+  text-align: start;
+  height: 40px;
+}
+.temp-and-search-container .weather-icone-container img {
+  width: 120px;
+}
+.temp-and-search-container .weather-icone-container i {
+  font-size: 120px;
+  color: black;
+}
+
+.chart_container {
+  height: calc(100% - 73px);
+  height: 82vh;
+}
+
+.temp-line-weather {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: black;
+}
+.temp-line-weather .temp h1 {
+  font-size: 65px;
+  font-weight: 300;
+}
+.temp-line-weather .weather-result h2 {
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.temp-line-weather .line {
+  width: 250px;
+  border-radius: 2px;
+  height: 2px;
+  background-color: #efefef;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: black;
+}
+.date h3, .date h2 {
+  font-weight: 400;
+}
+
+.louction {
+  color: black;
+}
+.louction h1 {
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.time_zone {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.time_zone label {
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+}
+.time_zone select {
+  padding: 5px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+.time_zone select option {
+  padding: 5px;
+  font-weight: 600;
+}
+
+.hostory-container {
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  background-color: #efefef;
+  max-height: 130px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px 0px 20px 20px;
+  position: absolute;
+}
+.hostory-container > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  height: 40px;
+  color: #748cf1;
+}
+.hostory-container > div h2 {
+  font-size: 18px;
+  text-align: start;
+  text-overflow: clip;
+  font-weight: 400;
+  cursor: pointer;
+  text-wrap: nowrap;
+}
+
+* {
+  font-family: "Quicksand", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.all-data-show-container {
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  height: 80%;
+  gap: 80px 20px;
+}
+.all-data-show-container .Show {
+  height: 25%;
+  width: 31%;
+  background-color: #748cf1;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  color: white;
+}
+.all-data-show-container .Show h3 {
+  font-weight: 400;
+}
+.all-data-show-container .Show h2 {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.notifi_container {
+  position: absolute;
+  width: 700px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 0px 10px 6px #efefef;
+  border-radius: 10px;
+  overflow: hidden;
+  animation-duration: 5s;
+  animation-name: notif;
+  animation-fill-mode: forwards;
+  z-index: 10;
+}
+.notifi_container .notifi_para {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  background-color: white;
+  align-items: center;
+  padding-left: 20px;
+}
+.notifi_container .x {
+  height: 100%;
+  width: 10%;
+  display: flex;
+  background-color: #efefef;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  padding: 5px;
+}
+.notifi_container .x i {
+  cursor: pointer;
+}
+
+@keyframes notif {
+  0% {
+    top: 0%;
+  }
+  30% {
+    top: 10%;
+  }
+  70% {
+    top: 10%;
+  }
+  100% {
+    top: -5%;
+  }
+}
+.home-container {
+  padding: 45px 1vw;
+  background-color: #d1cfcf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.home-container .home {
+  width: 97vw;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+}
+
+@media (max-width: 1600px) {
+  .louction h1 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 1440px) {
+  .time_zone label {
+    font-size: 16px;
+  }
+  .louction h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 1280px) {
+  .temp-and-search-container {
+    padding: 20px 10px;
+  }
+  .temp-container .Show h3 {
+    font-size: 16px;
+  }
+  .temp-container .Show h2 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1024px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+  }
+  .temp-and-search-container {
+    width: 100%;
+    height: 100vh;
+    gap: 50px;
+  }
+  .temp-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 0px 20px 20px;
+  }
+  .temp-container .nav-bar {
+    align-self: center;
+  }
+  .temp-container .Show {
+    height: 20%;
+  }
+}
+@media (max-width: 800px) {
+  .notifi_container {
+    width: 550px;
+  }
+  .all-data-show-container {
+    gap: 30px 10px;
+  }
+  .Show {
+    width: 45% !important;
+  }
+}
+@media (max-width: 600px) {
+  .notifi_container {
+    width: 400px;
+  }
+  .notifi_container .x {
+    width: 7%;
+  }
+  .notifi_container .notifi_para {
+    width: 97%;
+    font-size: 14px;
+  }
+  .Show {
+    width: 65% !important;
+  }
+}
+@media (max-width: 480px) {
+  .nav-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nav-bar > div {
+    width: 40%;
+  }
+  .notifi_container {
+    width: 320px;
+  }
+}
+@media (max-width: 320px) {
+  .time_zone {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,45 @@
+.notifi_container{
+    position: absolute;
+    width: 700px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 10px 6px #efefef;
+    border-radius: 10px;
+    overflow: hidden;
+    animation-duration: 5s;
+    animation-name: notif;
+    animation-fill-mode: forwards;
+    z-index: 10;
+    .notifi_para{
+        height: 100%;
+        width: 90%;
+        display: flex;
+        justify-content: flex-start;
+        background-color: white;
+        align-items: center;
+        padding-left: 20px;
+    }
+    .x{
+        height: 100%;
+        width: 10%;
+        display: flex;
+        background-color: #efefef;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        padding: 5px;
+        i{
+            cursor: pointer;
+        }
+    }
+}
+@keyframes notif {
+    0%{top : 0%}
+    30%{top: 10%;}
+    70%{top: 10%;}
+    100%{top: -5%;}
+}
